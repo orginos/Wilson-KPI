@@ -1,0 +1,66 @@
+%% ****** Start of file qpdf.tex ****** 
+\documentclass[11pt,a4paper]{article}
+\usepackage{jheppub}
+
+% Add packages
+%\usepackage{dcolumn}
+%$\usepackage{multirow}
+\usepackage{verbatim}
+%\usepackage{graphicx}
+%\usepackage{color}
+%\usepackage{ulem}
+%\usepackage{placeins}
+\usepackage{bigints}
+
+% Define new commands
+\newcommand{\ms}{\overline{MS}}
+\newcommand{\trace}{\operatorname{Tr}}
+
+%Title of paper
+\title{Key Performance Indicator for autocorrelation times of low energy observables in Lattice QCD}
+\author[a,b]{Kostas Orginos}
+\affiliation[a]{Physics Department, College of William and Mary,
+Williamsburg, Virginia 23187, U.S.A.}
+\affiliation[b]{Thomas Jefferson National Accelerator Facility, Newport News, 
+Virginia 23606, U.S.A.}
+\emailAdd{kostas@wm.edu}
+\abstract{ This is a description of a code for measuring the autocorrelation times of selected low energy observables in Lattice QCD calculations. The test case at hand is pure SU(3) gauge theory using the Wilson gauge action. As the continuum limit is approached in such calculations, the autocorrelation times of observables are know to grow fast rendering these calculations impractical. Here we monitor the autocorrelation times of 1x1 Wilson loops constructed from smeared links via gradient flow. In addition we  monitor the autocorrelation time of the topological charge. The application code for these calculations is CHROMA.  }
+\begin{document}
+\maketitle
+
+\section{Introduction}
+
+The continuum limit in lattice QCD calculations is taken by tuning the lattice bare coupling to a  critical point where a second order phase transition occurs. In the neighborhood of this second order phase transition point, the Monte Carlo Algorithms used to perform the calculations show critical slowing. In order to access the efficiency of such algorithms a careful study of autocorrelation times of several observables needs to be done.
+Given that the problem is generic and appears both in calculations with or without dynamical fermions,  we use pure SU(3) gauge theory as our benchmark. Pure gauge theory calculations require relatively small amount of computational resources to thoroughly study autocorrelation times. Given that our target application is QCD with dynamical fermions we restrict ourselves to algorithms suitable for dynamical fermions.
+ 
+\section{Benchmark setup}
+
+Our benchmark is defined as following:
+\begin{enumerate}
+\item Pure SU(3) gauge theory
+\item Action: Wilson gauge action
+\item Bare gauge coupling $\beta=6.179$
+\item Lattice size $32^4$
+\item Simulation algorithm: Hybrid Monte Carlo 
+\item Code: CHROMA
+\end{enumerate}
+
+Steps for running the benchmark:
+\begin{enumerate}
+\item Pure SU(3) gauge theory
+\item Action: Wilson gauge action
+\item Bare gauge coupling $\beta=6.179$
+\item Lattice size $32^4$
+\item Simulation algorithm: Hybrid Monte Carlo 
+\item Code: CHROMA
+\end{enumerate}
+
+
+
+ % Create the reference section using BibTeX:
+\clearpage
+\bibliographystyle{apsrev}
+\bibliography{wilson-kpi.bib}
+
+% End document
+\end{document}
