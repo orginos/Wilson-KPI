@@ -45,20 +45,20 @@ Our benchmark is defined as following:
 \item Code: CHROMA
 \end{enumerate}
 
+\noindent
 Steps for running the benchmark:
 \begin{enumerate}
-\item Pure SU(3) gauge theory
-\item Action: Wilson gauge action
-\item Bare gauge coupling $\beta=6.179$
-\item Lattice size $32^4$
-\item Simulation algorithm: Hybrid Monte Carlo 
-\item Code: CHROMA
+\item	 Download and compile CHROMA by following instruction on:\\
+{\tt http://jeffersonlab.github.io/chroma }
+\item Checkout from GitHub the Wilson KPI package:\\
+	{\tt > git clone git@github.com:orginos/Wilson-KPI.git}
+\item Untar the file {\tt wl\_32\_32\_b6p179-kpi.tar.gz} and follow the instruction is the README file it contains. In order to run you need to modify the {\tt pbs\_hmc.sh} script to match the requirements of your queueing system. The required input file to start the calculations is included in the package.
 \end{enumerate}
 
-
+Results from running this test case have been published in~\cite{Gambhir:2015nda},
+and follow closely the analysis performed in~\cite{Schaefer:2010hu}.
 
  % Create the reference section using BibTeX:
-\clearpage
 \bibliographystyle{apsrev}
 \bibliography{wilson-kpi.bib}
 
